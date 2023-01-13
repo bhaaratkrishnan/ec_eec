@@ -1,0 +1,4 @@
+deta==1.1.0
+fastapi==0.89.1
+imagekitio==3.0.1
+jinja2

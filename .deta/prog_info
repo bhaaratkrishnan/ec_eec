@@ -1,0 +1,1 @@
+{"id":"1474bb53-8e29-4f34-ba18-c0d2c769d5ae","space":34402,"runtime":"python3.9","name":"eceec","path":"0x88ya","project":"d0excjil","account":"144798365827","region":"ap-south-1","deps":["deta==1.1.0","fastapi==0.89.1","imagekitio==3.0.1","jinja2"],"envs":null,"public":true,"log_level":"debug","cron":""}

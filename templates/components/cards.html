@@ -1,0 +1,32 @@
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h6 class="text-primary">{{ cards.title }}</h6>
+            <h1 class="mb-4">{{ cards.subtitle }}</h1>
+        </div>
+        <div class="row g-4">
+            {% for event in cards.events %}
+            <!-- card start -->
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="{{ event.img_link }}" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-lightbulb fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">{{ event.title }}</h4>
+                        <p>{{ event.subtitle }}</p>
+                        <a class="small fw-medium" href="{{ url_for('single_event', event_name=event.title) }}">Read
+                            More<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- card end  -->
+            {% endfor %}
+            {% if cards.more_event != False %}
+            <a class="small fw-medium" href="{{ url_for('events') }}">More Events<i
+                    class="fa fa-arrow-right ms-2"></i></a>
+            {% endif %}
+        </div>
+    </div>
+</div>
